@@ -15,12 +15,10 @@ communication compliance access and responsibilities among different
 users in your organization.
 
 1.  If the Microsoft Purview portal is open continue to step 2,
-    otherwise, open the **+++https://purview.microsoft.com+++** and log
+    otherwise, open the **```https://purview.microsoft.com```** and log
     in with the **MOD Administrator** credentials.
 
-2.  
-
-3.  In the navigation select **Settings**, and select **Role**
+2.  In the navigation select **Settings**, and select **Role**
     **groups** under **Role groups**, select **Communication
     Compliance**. Then select **Edit**. On the side pane, again select
     **Edit**.
@@ -28,24 +26,22 @@ users in your organization.
 ![A screenshot of a computer Description automatically
 generated](./media/image1.png)
 
-4.  On the **Edit members of the role group** select **Choose Users**.
+3.  On the **Edit members of the role group** select **Choose Users**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image4.png)
 
-5.  Make sure to select **MOD Administrator**, **Megan Bowen**, and
+4.  Make sure to select **MOD Administrator**, **Megan Bowen**, and
     **Patti Fernandez**. Then choose **Select**.
 
 ![](./media/image7.png)
 
-6.  
-
-7.  Select **Next**.
+5.  Select **Next**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image10.png)
 
-8.  Select **Save** to add the users to the role group.
+6.  Select **Save** to add the users to the role group.
     Select **Done** to complete the steps.
 
 ![A screenshot of a computer Description automatically
@@ -72,7 +68,7 @@ organization.
 2.  Enter the following cmdlet to use the **Exchange Online
     PowerShell** module and connect to your tenant:
 
-**+++Connect-ExchangeOnline+++**
+**```Connect-ExchangeOnline```**
 
 ![Text Description automatically generated](./media/image14.png)
 
@@ -95,10 +91,8 @@ organization.
       used to communicate outside of the communication compliance policy
       configuration.
 
-**+++New-DistributionGroup -Name** **"Communication Compliance Group
-Contoso" -Alias** **"CCG_Contoso" -MemberDepartRestriction**
-**'Closed' -MemberJoinRestriction 'Closed'**
-**-ModerationEnabled $true+++**
+**```New-DistributionGroup -Name "Communication Compliance Group
+Contoso" -Alias "CCG_Contoso" -MemberDepartRestriction 'Closed' -MemberJoinRestriction 'Closed' -ModerationEnabled $true```**
 
 ![BrokenImage](./media/image16.png)
 
@@ -106,8 +100,8 @@ Contoso" -Alias** **"CCG_Contoso" -MemberDepartRestriction**
 the **following command**to track users added to the communication
 compliance policy in your organization.
 
-**+++Set-DistributionGroup -Identity "Communication Compliance Group
-Contoso"-CustomAttribute1** **"MonitoredCommunication"+++**
+**```Set-DistributionGroup -Identity "Communication Compliance Group
+Contoso"-CustomAttribute1 "MonitoredCommunication"```**
 
 ![A screen shot of a computer Description automatically
 generated](./media/image17.png)
@@ -115,7 +109,7 @@ generated](./media/image17.png)
 5.  Run the following PowerShell script on a recurring schedule to add
     users to the communication compliance policy:
 
-**+++$Mbx = (Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize
+**$Mbx = (Get-Mailbox -RecipientTypeDetails UserMailbox -ResultSize
 Unlimited -Filter {CustomAttribute9 -eq $Null})**
 
 **$i = 0**
@@ -137,7 +131,7 @@ Contoso" -Member $M.DistinguishedName -ErrorAction SilentlyContinue**
 **}**
 
 **Write-Host $i "Mailboxes added to supervisory review distribution
-group." +++**
+group."**
 
 ![BrokenImage](./media/image18.png)
 
@@ -153,7 +147,7 @@ listed under members tab.
 ## Exercise 3 – Creating a communication compliance policy
 
 1.  If the Microsoft Purview compliance portal is open continue to step
-    2, otherwise, open the **+++https://purview.microsoft.com+++** and
+    2, otherwise, open the **```https://purview.microsoft.com```** and
     log in as **MOD Administrator**.
 
 2.  In the Microsoft Purview portal, select **Settings** \>
@@ -172,9 +166,9 @@ generated](./media/image23.png)
 
 ![](./media/image25.png)
 
-5.  On the Name your DLP policy page, type **+++My first communication
-    compliance policy+++** in the **Name** field and **+++This is a
-    policy to test communication compliance+++** in
+5.  On the Name your DLP policy page, type **```My first communication
+    compliance policy```** in the **Name** field and **```This is a
+    policy to test communication compliance```** in
     the **Description** field. Select **Next**.
 
 ![Graphical user interface, text, application Description automatically
@@ -230,7 +224,7 @@ generated](./media/image36.png)
 ## Exercise 4 – Editing a communication compliance policy
 
 1.  If the Microsoft Purview compliance portal is open continue to step
-    2, otherwise, open the **+++https://purview.microsoft.com+++** and
+    2, otherwise, open the **```https://purview.microsoft.com```** and
     log in as **MOD Administrator**.
 
 2.  In the Microsoft Purview portal, go to **Settings** \>
@@ -253,23 +247,21 @@ generated](./media/image39.png)
 ![Graphical user interface, application, Teams Description automatically
 generated](./media/image40.png)
 
-5.  
-
-6.  In the **Start typing to find users or groups**, search
+5.  In the **Start typing to find users or groups**, search
     for **Communication** and select **Communication Compliance Groups
     Contoso**.
 
 ![](./media/image42.png)
 
-7.  On Choose supervised user and reviewers under Reviewers add MOD
+6.  On Choose supervised user and reviewers under Reviewers add MOD
     Administrator to the Reviewers.
 
 ![Graphical user interface, application, Teams Description automatically
 generated](./media/image44.png)
 
-8.  Select **Next** till you reach **Review and finish** page.
+7.  Select **Next** till you reach **Review and finish** page.
 
-9.  Click on **Save**.
+8.  Click on **Save**.
 
 ## Exercise 5 – Creating notice templates and configure user anonymization
 
@@ -293,20 +285,20 @@ generated](./media/image48.png)
 4.  On the **Modify a notice template** page, complete the following
     fields:
 
-    - Template name (required): **+++Sample Notice+++**
+    - Template name (required): **```Sample Notice```**
 
-    - Send from (required): Select **Patti** **Fernandez** by
+    - Send from (required): Select **Patti Fernandez** by
       typing **Patti** and selecting the name from the drop down.
 
     - Cc (optional): Select **MOD** **administrator** by
       typing **MOD** and selecting the name from the drop down.
 
-    - Subject (required): **+++Your communication violets company
-      Communication compliance policy.+++**
+    - Subject (required): **```Your communication violets company
+      Communication compliance policy.```**
 
-    - Message body (required): **+++Please note this for future
+    - Message body (required): **```Please note this for future
       reference and provide an acceptable justification for your current
-      communication. +++**
+      communication. ```**
 
 5.  Select **Create** to create and save the notice template.
 
@@ -321,21 +313,21 @@ policy when you have your own licenses. You can perform steps but your
 mail will not be able to reach the receiver from your current tenant.
 
 1.  Open outlook by going
-    to **+++https://outlook.office365.com/mail/+++**and sign in with the
-    username **+++adelev@WWLxXXXXXX.onmicrosoft.com+++** and the User
+    to **```https://outlook.office365.com/mail/```**and sign in with the
+    username **```adelev@{TENANTPREFIX}.onmicrosoft.com```** and the User
     Password.
 
 2.  Send an email to your personal email account with the following
     message body.
 
-Message body: **+++Employee Patti Fernandez EMP123456 is on absence
-because of the flu/influenza+++**
+Message body: **```Employee Patti Fernandez EMP123456 is on absence
+because of the flu/influenza```**
 
 **Note** Email messages can take approximately 24 hours to fully process
 in a policy. Communications in Microsoft Teams, Yammer, and third-party
 platforms can take approximately 48 hours to fully process in a policy.
 
-Sign in to **+++https://purview.microsoft.com/+++** as **Patti
+Sign in to **```https://purview.microsoft.com/```** as **Patti
 Fernandez**. Navigate to **Communication compliance** \> **Alerts** to
 view the alerts for your policies after 24 hours.
 

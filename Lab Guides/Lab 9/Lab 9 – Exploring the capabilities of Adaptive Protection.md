@@ -45,7 +45,7 @@ generated](./media/image3.png)
 Task 2 – Exploring Default DLP policies for each of the risk levels of
 Adaptive Protection.
 
-1.  Under Adaptive Protection, select DLP Policesand select Adaptive
+1.  Under Adaptive Protection, select DLP Polices and select Adaptive
     Protection Policy for Endpoint DLP.
 
 ![BrokenImage](./media/image6.png)
