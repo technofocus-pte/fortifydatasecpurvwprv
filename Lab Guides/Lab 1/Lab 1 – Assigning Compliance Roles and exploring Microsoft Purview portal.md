@@ -28,7 +28,7 @@ for implementing security with Microsoft Purview.
 
 1.  Log into the VM with the account details provided with your lab.
 
-2.  Log in to the Microsoft 365 admin center ```https://admin.microsoft.com``` using Administrative Username and Administrative Password.
+2.  Log in to the Microsoft 365 admin center **```https://admin.microsoft.com```** using Administrative Username and Administrative Password.
 
 3.  From the left pane, select **Users** \> **Active users**, and click on the first user **Adele Vance**.
 
@@ -43,7 +43,7 @@ for implementing security with Microsoft Purview.
 ![A screenshot of a computer Description automatically
 generated](./media/image20.png)
 
-6.  Change the manager to **Patti Fernandez** for all the users who have been assigned the licenses except MOD Administrator.
+6.  Change the manager to **Patti Fernandez** for all the users who have been assigned the licenses.
 
 7.  For Patti Fernandez, add **MOD Administrator** as the manager.
 
@@ -78,8 +78,8 @@ generated](./media/image26.png)
 ![A screenshot of a computer Description automatically
 generated](./media/image28.png)
 
-2.  For name use ```Contoso Finance Team```, and for description
- use ```This team handles finance.```, and then click
+2.  For name use **```Contoso Finance Team```**, and for description
+ use **```This team handles finance.```**, and then click
  on **Next**.
 
 ![A screenshot of a computer Description automatically
@@ -94,7 +94,7 @@ generated](./media/image29.png)
 4.  On the **Add members** page add **Adele Vance** as a member,
  click **Next**. On the **Add members** page, select **Next**.
 
-5.  For group email address use ```contfosofinance``` and then
+5.  For group email address use **```contfosofinance```** and then
  click **Next**.
 
 ![A screenshot of a computer Description automatically
@@ -120,8 +120,8 @@ generated](./media/image42.png)
  information.
 
 - On the **Set up the basics**, enter the following to
-  the **Name** field: ```EDM_DataUploaders```. In the Description
-  field, enter ```People who will upload data for EDM```.
+  the **Name** field: **```EDM_DataUploaders```**. In the Description
+  field, enter **```People who will upload data for EDM```**.
 
 - Select **Next**.
 
@@ -130,10 +130,10 @@ generated](./media/image42.png)
 - On the **Review and finish adding group** page, review your settings
   and select **Create group**.
 
-- When the **New group created** page is shown, select the close icon. Now select the newly created
-  **EDM_DataUploaders** group from the list.
+- When the **New group created** page is shown, select  newly created
+  **EDM_DataUploaders** group.
 
-- Under members tab, select **View all and manage owners**, and add **Patti Fernandez** and
+- Select **View all and manage owners**, and add **Patti Fernandez** and
   **Christie Cline**.
 
 - Similarly add **Christie Cline** as the member.
@@ -143,7 +143,7 @@ generated](./media/image44.png)
 
 ### Task 4 – Enabling trial for compliance Assessments
 
-1.  Log in to the Purview Portal ```https://purview.microsoft.com``` using **Administrative Username** and **Administrative Password**.
+1.  Log in to the Purview Portal **```https://purview.microsoft.com```** using **Administrative Username** and **Administrative Password**.
 
 2.  If a welcome window is displayed, agree to the terms and
  select **Get started** and close it.
@@ -183,8 +183,8 @@ generated](./media/image57.png)
 
 ## Exercise 2 - Managing Office 365 Message Encryption
 
-The first setting **Patti Fernandez** needs to configure and test
-with their pilot team is the **Microsoft 365 built-in** **Office 365
+The first setting **Patti** **Fernandez** needs to configure and test
+with his pilot team is the **Microsoft 365 built-in** **Office 365
 Message Encryption (OME)**. For this purpose, he will modify the default
 template and create a new branding template, that will be assigned to
 one of the pilot users. The pilot users will then test the OME
@@ -207,12 +207,12 @@ generated](./media/image60.png)
 3.  Enter the following cmdlet to install the latest Exchange Online
     PowerShell module version:
 
-```Install-Module ExchangeOnlineManagement```
+**```Install-Module ExchangeOnlineManagement```**
 
 ![A computer screen with text on it Description automatically
 generated](./media/image61.png)
 
-4.  Confirm the **NuGet** provider security dialog with **Y** for Yes and
+4.  Confirm the **NuGet** provider security dialog with **Y**for Yes and
     press **Enter**. This process may take some seconds to complete.
 
 ![A computer screen with white text Description automatically
@@ -227,7 +227,7 @@ generated](./media/image63.png)
 6.  Enter the following cmdlet to change your execution policy and
     press **Enter**
 
-```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
+**```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```**
 
 ![BrokenImage](./media/image64.png)
 
@@ -239,7 +239,7 @@ generated](./media/image63.png)
 8.  Enter the following cmdlet to use the **Exchange Online
     PowerShell** module and connect to your tenant:
 
-```Connect-ExchangeOnline```
+**```Connect-ExchangeOnline```**
 
 ![BrokenImage](./media/image66.png)
 
@@ -250,7 +250,7 @@ generated](./media/image63.png)
 10. Verify Azure RMS and IRM is activated in your tenant by using the
     following cmdlet and press **Enter**:
 
-```Get-IRMConfiguration | fl AzureRMSLicensingEnabled```
+**```Get-IRMConfiguration | fl AzureRMSLicensingEnabled```**
 
 11. When **AzureRMSLicensingEnabled** result is **True**, Azure RMS is
     activated for your tenant. Continue with the next step.
@@ -262,7 +262,7 @@ generated](./media/image63.png)
     cmdlet (replace {TENANTPREFIX} with your tenant prefix given on the
     resources tab)
 
-```Test-IRMConfiguration -Sender adelev@{TENANTPREFIX}.onmicrosoft.com -Recipient adelev@{TENANTPREFIX}.onmicrosoft.com```
+**```Test-IRMConfiguration -Sender adelev@{TENANTPREFIX}.onmicrosoft.com -Recipient adelev@{TENANTPREFIX}.onmicrosoft.com```**
 
 13. Verify all tests are in the status PASS and no errors are shown.
 
@@ -284,7 +284,7 @@ your organization.
 
 1.  Run the following cmdlet to view the default OME configuration:
 
-```Get-OMEConfiguration -Identity"OME Configuration" |fl```
+**```Get-OMEConfiguration -Identity"OME Configuration" |fl```**
 
 ![A screen shot of a computer Description automatically
 generated](./media/image70.png)
@@ -297,7 +297,7 @@ generated](./media/image70.png)
 3.  Run the following cmdlet to restrict the use of social IDs for
     accessing messages from your tenant protected with OME:
 
-```Set-OMEConfiguration -Identity"OME Configuration" -SocialIdSignIn:$false```
+**Set-OMEConfiguration -Identity"OME Configuration" -SocialIdSignIn:$false**
 
 ![A computer screen with text on it Description automatically
 generated](./media/image72.png)
@@ -310,7 +310,7 @@ generated](./media/image72.png)
 5.  Check the default configuration again and validate,
     the **SocialIdSignIn** parameter is now set to **False**.
 
-```Get-OMEConfiguration -Identity "OME Configuration" |fl```
+**```Get-OMEConfiguration -Identity "OME Configuration" |fl```**
 
 6.  Notice the result should show the **SocialIDSignIn**is set
     to **False**.
@@ -353,7 +353,7 @@ automatically generated](./media/image76.png)
 6.  In the **To** line enter your personal or other third-party email
     address that is not in the tenant domain.
     Enter **Secret Message** to the subject line
-    and ```My super-secret message.``` to the body.
+    and **```My super-secret message.```** to the body.
 
 ![Graphical user interface, text, application, Word Description
 automatically generated](./media/image77.png)
@@ -423,7 +423,7 @@ to all mails sent from the finance department.
     connected. run the following cmdlet to create a new OME
     configuration:
 
-```New-OMEConfiguration -Identity "Finance Department" -ExternalMailExpiryInDays 7```
+**```New-OMEConfiguration -Identity "Finance Department" -ExternalMailExpiryInDays 7```**
 
 ![Text Description automatically generated](./media/image82.png)
 
@@ -432,10 +432,10 @@ to all mails sent from the finance department.
 
 ![Text Description automatically generated](./media/image83.png)
 
-3.  Change the introduction text message with the following cmdlet
+3.  Change the introduction text message with the following cmdlet:
 
-```Set-OMEConfiguration -Identity "Finance Department" -IntroductionText "from Contoso Ltd. finance department has
-sent you a secure message."```
+**```Set-OMEConfiguration -Identity "Finance Department" -IntroductionText "from Contoso Ltd. finance department has
+sent you a secure message."```**
 
 ![BrokenImage](./media/image84.png)
 
@@ -444,9 +444,9 @@ sent you a secure message."```
 
 ![BrokenImage](./media/image85.png)
 
-5.  Change the body email text of the message with the following cmdlet
+5.  Change the body email text of the message with the following cmdlet:
 
-```Set-OMEConfiguration -Identity "Finance Department" -EmailText "Encrypted message sent from Contoso Ltd. finance department. Handle the content responsibly."```
+**```Set-OMEConfiguration -Identity "Finance Department" -EmailText "Encrypted message sent from Contoso Ltd. finance department. Handle the content responsibly."```**
 
 6.  Confirm the warning message for customizing the template
     with **Y** for Yes and press **Enter**.
@@ -454,10 +454,10 @@ sent you a secure message."```
 ![Text Description automatically generated](./media/image86.png)
 
 7.  Change the disclaimer URL to point to Contoso's privacy statement
-    site
+    site:
 
-```Set-OMEConfiguration -Identity "Finance
-Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
+**```Set-OMEConfiguration -Identity "Finance
+Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```**
 
 ![Text Description automatically generated](./media/image87.png)
 
@@ -470,7 +470,7 @@ Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
     the custom OME template to all messages sent from the Contoso
     finance team. This process may take a few seconds to complete.
 
-```New-TransportRule -Name "Encrypt all mails from Contoso Finance team" -FromScopeInOrganization  FromMemberOf "Contoso Finance Team" -ApplyRightsProtectionCustomizationTemplate" Finance Department" -ApplyRightsProtectionTemplate Encrypt```
+**```New-TransportRule -Name "Encrypt all mails from Contoso** **Finance team" -FromScopeInOrganization  FromMemberOf "Contoso** **Finance Team" -ApplyRightsProtectionCustomizationTemplate" Finance Department" -ApplyRightsProtectionTemplate Encrypt```**
 
 ![BrokenImage](./media/image89.png)
 
@@ -478,7 +478,7 @@ Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
 
 10. Type the following cmdlet to verify changes.
 
-```Get-OMEConfiguration -Identity "Finance Department" | Format-List```
+**```Get-OMEConfiguration -Identity "Finance Department" | Format-List```**
 
 ![BrokenImage](./media/image91.png)
 
@@ -495,7 +495,7 @@ account of Christie Cline, who is a member of the finance team. In the
 trial account you will not have the privilege to send any email but you
 can check out the following steps to understand how to test the template
 when you have your own licenses. You can perform step 1 - 4 but your
-mail may not be able to reach the receiver from your current trial tenant.
+mail will not be able to reach the receiver from your current tenant.
 
 1.  In **Microsoft Edge**, open a **New InPrivate Window** and navigate
     to **https://outlook.office.com** and log into Outlook on the web
