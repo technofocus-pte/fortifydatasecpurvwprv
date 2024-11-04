@@ -434,8 +434,7 @@ to all mails sent from the finance department.
 
 3.  Change the introduction text message with the following cmdlet
 
-```Set-OMEConfiguration -Identity "Finance Department" -IntroductionText "from Contoso Ltd. finance department has
-sent you a secure message."```
+```Set-OMEConfiguration -Identity "Finance Department" -IntroductionText "from Contoso Ltd. finance department has sent you a secure message."```
 
 ![BrokenImage](./media/image84.png)
 
