@@ -455,8 +455,7 @@ to all mails sent from the finance department.
 7.  Change the disclaimer URL to point to Contoso's privacy statement
     site
 
-```Set-OMEConfiguration -Identity "Finance
-Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
+```Set-OMEConfiguration -Identity "Finance Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
 
 ![Text Description automatically generated](./media/image87.png)
 
