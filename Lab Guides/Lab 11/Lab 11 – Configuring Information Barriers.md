@@ -35,7 +35,7 @@ For this structure, Contoso's plan includes three IB policies:
 
 2.  Run the following:
 
-**```Install-Module ExchangeOnlineManagement```**
+```Install-Module ExchangeOnlineManagement```
 
 3.  If prompted ‘**Do you want PowerShellGet to install and import the
     NuGet provider now?**’ and ‘**Are you sure you want to install the
@@ -46,14 +46,14 @@ generated](./media/image2.png)
 
 4.  Run the following command once the installation is done.
 
-**```Import-Module ExchangeOnlineManagement```**
+```Import-Module ExchangeOnlineManagement```
 
 ![A screenshot of a computer Description automatically
 generated](./media/image3.png)
 
 5.  Now run the following command to connect to Exchange Online.
 
-**```Connect-IPPSSession```**
+```Connect-IPPSSession```
 
 ![A screenshot of a computer Description automatically
 generated](./media/image4.png)
@@ -66,29 +66,24 @@ generated](./media/image4.png)
 7.  Run the following command one by one in the **PowerShell** to create
     the organisation structure.
 
-**```New-OrganizationSegment -Name"HR" -UserGroupFilter"Department -eq
-'HR'"```**
+```New-OrganizationSegment -Name"HR" -UserGroupFilter"Department -eq 'HR'"```
 
 ![BrokenImage](./media/image6.png)
 
-**```New-OrganizationSegment -Name"Sales" -UserGroupFilter "Department
--eq 'Sales'"```**
+```New-OrganizationSegment -Name"Sales" -UserGroupFilter "Department -eq 'Sales'"```
 
-**```New-OrganizationSegment -Name"Marketing" -UserGroupFilter
-"Department -eq 'Marketing'"```**
+```New-OrganizationSegment -Name"Marketing" -UserGroupFilter "Department -eq 'Marketing'"```
 
-**```New-OrganizationSegment -Name"Research" -UserGroupFilter
-"Department -eq 'Research'"```**
+```New-OrganizationSegment -Name"Research" -UserGroupFilter "Department -eq 'Research'"```
 
-**```** **New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter
-"Department -eq 'Manufacturing'"```**
+```New-OrganizationSegment -Name "Manufacturing" -UserGroupFilter "Department -eq 'Manufacturing'"```
 
 ### Task 2 – Enable scoped directory search in Microsoft Teams
 
 To turn on search by name
 
 1.  Go to Microsoft Teams admin center by going
-    to **```https://admin.teams.microsoft.com```**,
+    to ```https://admin.teams.microsoft.com```,
     select **Teams** \> **Teams settings**.
 
 ![A screenshot of a computer Description automatically
@@ -105,11 +100,11 @@ generated](./media/image8.png)
 
 ### Task 1 – Block communications between segments
 
-1.  Sign into the **```https://purview.microsoft.com/```** using
+1.  Sign into the ```https://purview.microsoft.com/``` using
     credentials for MOD Administration, given on the resources tab of
     your environment.
 
-2.  In the left navigation pane, select **Information barriers**.
+2.  In the left navigation pane, select **Solutions** > **Information barriers**.
 
 ![](./media/image9.png)
 
@@ -121,7 +116,7 @@ generated](./media/image8.png)
 generated](./media/image10.png)
 
 4.  On the **Name** page, enter a name for the
-    policy—**```Sales-Research```**. Then select **Next**.
+    policy—```Sales-Research```. Then select **Next**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image11.png)
@@ -178,14 +173,14 @@ generated](./media/image18.png)
 
 2.  Run the following:
 
-**```Import-Module ExchangeOnlineManagement```**
+```Import-Module ExchangeOnlineManagement```
 
 ![A screenshot of a computer Description automatically
 generated](./media/image19.png)
 
 3.  Now run the following command to connect to Exchange Online.
 
-**```Connect-IPPSSession```**
+```Connect-IPPSSession```
 
 ![A screenshot of a computer Description automatically
 generated](./media/image4.png)
@@ -198,7 +193,7 @@ generated](./media/image4.png)
     it will help prevent users who are in the **Research** segment from
     communicating with users in the **Sales** segment.
 
-**```New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -StateInactive```**
+```New-InformationBarrierPolicy -Name "Research-Sales" -AssignedSegment "Research" -SegmentsBlocked "Sales" -StateInactive```
 
 ![BrokenImage](./media/image20.png)
 
@@ -208,12 +203,12 @@ generated](./media/image4.png)
     with **HR** and **Marketing**. HR and Marketing aren't restricted
     from communicating with other segments..
 
-**```New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing"-AssignedSegment "Manufacturing"-SegmentsAllowed"HR","Marketing","Manufacturing"-State Inactive```**
+```New-InformationBarrierPolicy -Name "Manufacturing-HRMarketing"-AssignedSegment "Manufacturing"-SegmentsAllowed"HR","Marketing","Manufacturing"-State Inactive```
 
 ![A computer screen shot of a computer program Description automatically
 generated](./media/image21.png)
 
-7.  Sign into the **```https://purview.microsoft.com/```** using
+7.  Sign into the ```https://purview.microsoft.com/``` using
     credentials for **MOD Administration**, given on the home page of
     your environment.
 
@@ -225,7 +220,7 @@ generated](./media/image21.png)
 
 ## Exercise 3 – Apply IB policies
 
-1.  Sign into the **```https://purview.microsoft.com/```** using
+1.  Sign into the ```https://purview.microsoft.com/``` using
     credentials for MOD Administration, given on the resources tab of
     your environment.
 

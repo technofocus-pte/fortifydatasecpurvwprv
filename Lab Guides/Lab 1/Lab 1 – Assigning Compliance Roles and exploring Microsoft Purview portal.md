@@ -331,7 +331,7 @@ Encryption from users of your tenant and they need to use the OTP at any
 time accessing the encrypted content.
 
 1.  In **Microsoft Edge**, open a **New InPrivate Window** and navigate
-    to **https://outlook.office.com** and log into Outlook on the web
+    to ```https://outlook.office.com``` and log into Outlook on the web
     with the username **AdeleV@{TENANTPREFIX}.onmicrosoft.com** and the User
     Password given on your resources tab.
 

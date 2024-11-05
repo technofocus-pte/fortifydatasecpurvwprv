@@ -1,15 +1,13 @@
-# Lab 9 – Exploring the capabilities of Adaptive Protection
-
 ## Exercise 1 – Setting up Adaptive Protection
 
 ### Task 1 – Setting up risk levels for Adaptive Protection
 
 1.  In Microsoft Edge, open a New InPrivate Window, navigate
-    to **+++https://purview.microsoft.com+++** and log in using the
+    to ```https://purview.microsoft.com``` and log in using the
     admin tenant.
 
-2.  From the navigation bar, go to **Solutions** \> **Insider risk
-    management**.
+2.  From the navigation bar, go to **Solutions** \> **Insider risk**
+    **management**.
 
 ![](./media/image1.png)
 
@@ -29,11 +27,12 @@ generated](./media/image3.png)
 
 ![BrokenImage](./media/image4.png)
 
-6.  Under Define conditions for risk levels, select User performs at
-    least 3 data exfiltration activities, each… for Elevated risk.
-    Select User performs at least 2 data exfiltration activities,
-    each… for Moderate risk. Select User performs at least 1 data
-    exfiltration activities, each… for Minor risk. Then click Save.
+6.  Under **Define conditions for risk levels**, select **User performs
+    at least 3 data exfiltration activities,
+    each…** for **Elevated** risk. Select **User performs at least 2
+    data exfiltration activities, each… **for **Moderate** risk.
+    **Select User performs at least 1 data exfiltration activities,
+    each…** for **Minor** risk. Then click **Save**.
 
 ![BrokenImage](./media/image5.png)
 
@@ -42,8 +41,8 @@ generated](./media/image3.png)
 
 8.  Now we can customise the DLP policy for each level.
 
-Task 2 – Exploring Default DLP policies for each of the risk levels of
-Adaptive Protection.
+### Task 2 – Exploring Default DLP policies for each of the risk levels of
+Adaptive Protection
 
 1.  Under Adaptive Protection, select DLP Polices and select Adaptive
     Protection Policy for Endpoint DLP.
