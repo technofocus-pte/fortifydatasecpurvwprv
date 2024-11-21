@@ -455,7 +455,7 @@ to all mails sent from the finance department.
 7.  Change the disclaimer URL to point to Contoso's privacy statement
     site
 
-```Set-OMEConfiguration -Identity "Finance Department" -PrivacyStatementURL"https://contoso.com/privacystatement.html"```
+```Set-OMEConfiguration -Identity "Finance Department" -PrivacyStatementURL "https://contoso.com/privacystatement.html"```
 
 ![Text Description automatically generated](./media/image87.png)
 
@@ -468,7 +468,7 @@ to all mails sent from the finance department.
     the custom OME template to all messages sent from the Contoso
     finance team. This process may take a few seconds to complete.
 
-```New-TransportRule -Name "Encrypt all mails from Contoso Finance team" -FromScopeInOrganization  FromMemberOf "Contoso Finance Team" -ApplyRightsProtectionCustomizationTemplate" Finance Department" -ApplyRightsProtectionTemplate Encrypt```
+```New-TransportRule -Name "Encrypt all mails from Contoso Finance team" -FromScope InOrganization  FromMemberOf "Contoso Finance Team" -ApplyRightsProtectionCustomizationTemplate "Finance Department" -ApplyRightsProtectionTemplate Encrypt```
 
 ![BrokenImage](./media/image89.png)
 
