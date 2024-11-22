@@ -375,7 +375,7 @@ the commands accordingly.
     classification sensitive information type by running the following
     script in PowerShell
 
-```.\EdmUploadAgent.exe /SaveSchema /DataStoreNameemployeedb /OutputDir "C:\Users\Admin\Documents\"```
+```.\EdmUploadAgent.exe /SaveSchema /DataStoreName employeedb /OutputDir "C:\Users\Admin\Documents\"```
 
 **Note**: If the last command fails, it possibly takes more time until
 the **EDM_DataUploaders** group membership is applied. It can take up to
