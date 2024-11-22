@@ -1,4 +1,4 @@
- # Lab 7 – Configuring Insider Risk Management
+# Lab 7 – Configuring Insider Risk Management
 
 ## Objective:
 
@@ -307,8 +307,7 @@ automatically generated](./media/image42.png)
 
 ![](./media/image45.png)
 
-15. On the **Settings** \>**Accounts** \>**Access work or school**
-    \>**Managed by Contoso**, under **Device sync status**, click
+15. On the **Settings** \>**Accounts** \> **Access work or school** \> **Managed by Contoso**, under **Device sync status**, click
     on **Sync**.
 
 ![](./media/image46.png)
@@ -634,7 +633,7 @@ generated](./media/image107.png)
 ![A screenshot of a computer Description automatically
 generated](./media/image108.png)
 
-12. On **Choose indicators to turn on**, select** Select all under Risky
+12. On **Choose indicators to turn on**, select **Select all under Risky
     browsing indicators (preview)**, and uncheck rest of the boxes.
 
 ![A screenshot of a computer Description automatically
@@ -844,7 +843,7 @@ generated](./media/image135.png)
 ![A screenshot of a computer Description automatically
 generated](./media/image118.png)
 
-3.  In the T**his should last for (choose between 5 and 30 days)** field,
+3.  In the **This should last for (choose between 5 and 30 days)** field,
     select **10** days.
 
 4.  Use the **Search user to add to policies** field. Add **Patti**. Then click
@@ -901,7 +900,7 @@ generated](./media/image106.png)
 7.  On the **Exclude users and groups** page, select **Next**.
 
 9.  On the **Decide whether to prioritize** page, select **I want to specify
-    priority content**. Select the check box for S**harePoint
+    priority content**. Select the check box for **SharePoint
     sites**, **Sensitivity labels** and **Sensitive info types**. Select **Next** to
     continue.
 
