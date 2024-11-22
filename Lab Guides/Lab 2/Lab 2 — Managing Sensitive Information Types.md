@@ -389,7 +389,7 @@ path the documents folder on your VM.
     sensitive information type by running the following script in
     PowerShell:
 
-```.\EdmUploadAgent.exe /UploadData/DataStoreName employeedb /DataFile C:\Users\Admin\Documents\EmployeeData.csv /HashLocation C:\Users\Admin\Documents\ /Schema C:\Users\Admin\Documents\employeedb.xml```
+```.\EdmUploadAgent.exe /UploadData /DataStoreName employeedb /DataFile C:\Users\Admin\Documents\EmployeeData.csv /HashLocation C:\Users\Admin\Documents\ /Schema C:\Users\Admin\Documents\employeedb.xml```
 
 ![BrokenImage](./media/image48.png)
 
@@ -406,7 +406,7 @@ Check the path where you saved the file EmployeeData.csv
 15. Check the upload progress until the state changes to completed then
     run the following PowerShell command:
 
-```.\EdmUploadAgent.exe /GetSession /DataStoreNameemployeedb```
+```.\EdmUploadAgent.exe /GetSession /DataStoreName employeedb```
 
 ![BrokenImage](./media/image50.png)
 
