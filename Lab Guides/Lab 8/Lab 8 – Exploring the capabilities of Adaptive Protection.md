@@ -32,7 +32,7 @@ generated](./media/image3.png)
 6.  Under **Define conditions for risk levels**, select **User performs
     at least 3 data exfiltration activities,
     each…** for **Elevated** risk. Select **User performs at least 2
-    data exfiltration activities, each… **for **Moderate** risk.
+    data exfiltration activities, each…** for **Moderate** risk.
     **Select User performs at least 1 data exfiltration activities,
     each…** for **Minor** risk. Then click **Save**.
 
