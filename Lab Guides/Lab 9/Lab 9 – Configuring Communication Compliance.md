@@ -96,7 +96,7 @@ organization.
 ![BrokenImage](./media/image16.png)
 
 **Note:** You can add an **Exchange Custom Attribute** as in
-the **following command**to track users added to the communication
+the **following command** to track users added to the communication
 compliance policy in your organization.
 
 ```Set-DistributionGroup -Identity "Communication Compliance Group Contoso"-CustomAttribute1 "MonitoredCommunication"```
