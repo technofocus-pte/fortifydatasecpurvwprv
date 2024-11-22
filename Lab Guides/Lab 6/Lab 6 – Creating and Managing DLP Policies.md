@@ -448,8 +448,8 @@ generated](./media/image91.png)
 
 **Note:** If you do not see the **Data Classification Service** in the
 drop down yet, select **None** as of now. Once done come back after some
-time to **Policies**\>**Policy management** \>**All Policies**\>**Search
-for name: Credit card** \>**Select Credit Card Information for files**.
+time to **Policies** \> **Policy management** \> **All Policies** \> **Search
+for name: Credit card** \> **Select Credit Card Information for files**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image92.png)
