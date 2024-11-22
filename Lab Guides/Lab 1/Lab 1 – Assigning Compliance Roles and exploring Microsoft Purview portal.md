@@ -244,7 +244,7 @@ generated](./media/image63.png)
 ![BrokenImage](./media/image66.png)
 
 9. When the **Sign in** window is displayed, sign in as **Patti
-    Fernandez** using the username PattiF@{TENANTPREFIX}.onmicrosoft.com and
+    Fernandez** using the username ```PattiF@{TENANTPREFIX}.onmicrosoft.com``` and
     the User Password given on your resources tab.
 
 10. Verify Azure RMS and IRM is activated in your tenant by using the
@@ -332,7 +332,7 @@ time accessing the encrypted content.
 
 1.  In **Microsoft Edge**, open a **New InPrivate Window** and navigate
     to ```https://outlook.office.com``` and log into Outlook on the web
-    with the username **AdeleV@{TENANTPREFIX}.onmicrosoft.com** and the User
+    with the username ```AdeleV@{TENANTPREFIX}.onmicrosoft.com``` and the User
     Password given on your resources tab.
 
 2.  On the **Stay signed in?** dialog box, select the **Don’t show this
@@ -497,7 +497,7 @@ mail may not be able to reach the receiver from your current trial tenant.
 
 1.  In **Microsoft Edge**, open a **New InPrivate Window** and navigate
     to **https://outlook.office.com** and log into Outlook on the web
-    with the username **ChristieC@{TENANTPREFIX}.onmicrosoft.com** and the
+    with the username ```ChristieC@{TENANTPREFIX}.onmicrosoft.com``` and the
     User Password given on the resources tab.
 
 ![Graphical user interface, text, application Description automatically
