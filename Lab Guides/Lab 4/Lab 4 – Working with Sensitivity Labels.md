@@ -76,7 +76,7 @@ generated](./media/image7.png)
 
 11. Enter the following cmdlet to create the SharePoint admin url:
 
-```$adminurl = "https://" + $domain.Name.split('.')\[0\] + "-admin.sharepoint.com"```
+```$adminurl = "https://" + $domain.Name.split('.')[0] + "-admin.sharepoint.com"```
 
 ![A screenshot of a computer screen Description automatically
 generated](./media/image9.png)
