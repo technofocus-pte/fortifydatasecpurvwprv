@@ -13,9 +13,7 @@ the devices in an organisation. We will learn how to onboard those
 devices in Azure AD and Intune, and install an MDM agent on them, so
 that they can be used to get the alerts from those machines.
 
-## Exercise 1: Set up the environment
-
-### Task 0 : Synchronize the VM clock
+## Exercise 1: Synchronize the VM clock
 
 1.  After logging into the VM, select the windows icon. Then search
     for **Date and time**, and select **Date and time settings**.
@@ -35,6 +33,7 @@ generated](./media/image2.jpeg)
 ![A screenshot of a computer Description automatically generated with
 medium confidence](./media/image3.png)
 
+<<<<<<< Updated upstream
 ### Task 1: Redeem the Azure Pass
 
 **Note**: - You may be asked for authentication while performing this Task. Please download Microsoft Authenticator on your mobile device or add your phone number as the authentication method when asked. You will be guided through the steps given on your authentication setup wizard, when asked for authentication.
@@ -369,6 +368,8 @@ christies@{TENANTPREFIX}.onmicrosoft.com
 
 User password
 
+=======
+>>>>>>> Stashed changes
 ## Exercise 2: Create Insider Risk Management policies.
 
 ### Prerequisites
@@ -393,7 +394,7 @@ User password
 ![A screenshot of a computer Description automatically
 generated](./media/image60.png)
 
-4.  Select the checkbox near **Megan** and **Alex**. Then
+4.  Select the checkbox near **MOD Admin**, **Patti**, **Megan** and **Alex**. Then
     choose **Select**.
 
 ![](./media/image62.png)
@@ -423,79 +424,107 @@ generated](./media/image68.png)
 
 #### Step 3 – Onboarding a device
 
-In this deployment scenario, you'll onboard devices that haven't been
+In this deployment scenario, you'll onboard devices that hasn't been
 onboarded yet, and you just want to detect insider risk activities on
 Windows 10 devices.
 
-1.  Connect to **Pattis-Device** via RDP, click on windows and search
-    for **Windows Security**.
+We need to register our device/VM in Microsoft Entra ID as a prerequisite to creating any Insider Risk Policy.
+
+1.  Open windows **Setting** on your VM.
 
 ![A screenshot of a computer Description automatically
-generated](./media/image72.png)
+generated](./media/image14.png)
 
-2.  Click on **settings** icon in the bottom left.
-
-![Graphical user interface, application, Teams Description automatically
-generated](./media/image73.png)
-
-3.  Click on **About**.
+2.  Go to **Accounts** \> **Access work or school**. On the **Access work or school** page, click on **Connect**.
 
 ![A screenshot of a computer Description automatically
-generated](./media/image74.png)
+generated](./media/image15.png)
 
-4.  The version number is listed under Antimalware Client Version. The
-    version number is listed under Antimalware Client Version. Check
-    that **Antimalware Client Version** **4.18.2110** or newer, if not
-    continue to next step or if it is continue to step 9.
+3.  In the **Set up a work or school account** prompt, click on **Join
+    this device to Microsoft Entra ID**.
 
-![A screenshot of a computer Description automatically
-generated](./media/image75.png)
+![](./media/image16.png)
 
-5.  On the VM, click on windows and search for **Check for Updates**.
-
-![A screenshot of a computer Description automatically
-generated](./media/image76.png)
-
-6.  Click on **Download now**, or **Install now**.
+4.  In the sign in prompt, sign in with **MOD
+    Administrator** credentials given on the resources tab of your lab
+    environment. 
 
 ![A screenshot of a computer Description automatically
-generated](./media/image77.png)
+generated](./media/image17.png)
 
-7.  Once the install is completed, go again to windows security again
-    and check that **Antimalware Client Version** is **4.18.2110** or newer.
-    If not, repeat the steps 5 and 6, till the VM is updated.
+![Graphical user interface, application, PowerPoint Description
+automatically generated](./media/image18.png)
+
+5.  Press **Join** in the prompt **Make sure this is your organisation**.
+
+![Graphical user interface, text, application Description automatically
+generated](./media/image19.png)
+
+6.  Once done you will see a confirmation window **You’re all set!**.
+    Click on **Done**.
 
 ![A screenshot of a computer Description automatically
-generated](./media/image78.png)
+generated](./media/image20.png)
 
-8.  Close security center and update center. End the RDP connection for
-    now.
+7.  Again go to **Accounts** \> **Access work or school**. On the **Access work or school** page, click on **Connect**.
 
-9.  Repeat the steps from 1 to 7 to
-    update **Adeles-Device** and **Christies-Device**.
+![A screenshot of a computer Description automatically
+generated](./media/image15.png)
 
-10. Sign in to  ```https://security.microsoft.com/ ``` using
+8. In the **Set up a work or school account** prompt, use the MOD admin credentials to log in.
+
+![A screenshot of a computer Description automatically
+generated](./media/image21.png)
+
+9. On the **Setting up your device** page, select **Got it**.
+
+![A screenshot of a computer Description automatically
+generated](./media/image22.png)
+
+10. Now go to **windows settings** > **Accounts** > **Access work or school** > **Connected to Contoso MDM** > **Info** > **Sync**.
+
+![A screenshot of a computer Description automatically
+generated](./media/image23.png)
+
+![A screenshot of a computer Description automatically
+generated](./media/image24.png)
+
+11. Click on the windows symbol on your VM. Select the
+    user **Admin** and select **Sign out**.
+
+![A screenshot of a computer Description automatically
+generated](./media/image25.png)
+
+12.  On the user screen select **Other user**.
+
+![A screenshot of a computer Description automatically generated with
+medium confidence](./media/image26.png)
+
+13. Enter your O365 credentials given on the home page of your lab
+    environment and log into the VM as **MOD Administrator**.
+
+![A screenshot of a computer Description automatically generated with
+medium confidence](./media/image27.png)
+
+14. Close the windows settings app. Sign in to  ```https://purview.microsoft.com``` using
     your **MOD Administrator** account on your Lab VM.
 
-11. Select **Settings** \> **Device onboarding**.
+15. Select **Settings** \> **Device onboarding** > **Devices**.
 
 ![](./media/image80.png)
 
-12. Click on **Turn on Device onboarding**.
+16. Click on **Turn on Device onboarding**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image82.png)
 
-13. From the **settings** \> **Device onboarding** \> **Onboarding**.
+17. From the **Settings** \> **Device onboarding** \> **Onboarding**.
     Click on **Download package**.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image83.png)
 
-14. Once downloaded, connect to **Pattis-Device** via RDP and copy the
-    file to the desktop of **Pattis-Device**.
-
-15. Right click the file and **Extract all…** .
+18. Right click the file and **Extract all…** .
 
 ![A screenshot of a computer Description automatically generated with
 medium confidence](./media/image86.png)
@@ -503,68 +532,48 @@ medium confidence](./media/image86.png)
 ![A screenshot of a computer Description automatically
 generated](./media/image87.png)
 
-16. Once done open the folder and run the file
+19. Once done open the folder and run the file
     with **Administrator** rights.
 
 ![A computer screen with a computer screen Description automatically
 generated](./media/image88.png)
 
-17. Click on **More info**.
+20. Click on **More info**.
 
 ![Graphical user interface, application Description automatically
 generated](./media/image89.png)
 
-18. Click on **Run anyway**.
+21. Click on **Run anyway**.
 
 ![A screenshot of a computer error Description automatically
 generated](./media/image90.png)
 
-19. In the Command Prompt, press **Y** and press enter to confirm and
+22. In the Command Prompt, press **Y** and press enter to confirm and
     continue when prompted.
 
 ![A screenshot of a computer error Description automatically
 generated](./media/image91.png)
 
-20. You will receive a message that the device is onboarded. In the
+23. You will receive a message that the device is onboarded. In the
     Command Prompt once you get the message, **Press any key to continue
-    . . .**, press any key.
+    ...**, press any key.
 
-21. Once the Command Prompt is closed, open Command Prompt in
+24. Once the Command Prompt is closed, open Command Prompt in
     administrator mode to run a detection test and at the prompt, copy
     and run the command below. The Command Prompt window will close
     automatically.
 
-```powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyleHidden $ErrorActionPreference= 'silentlycontinue';(New-ObjectSystem.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe','C:\test-WDATP-test\invoice.exe');Start-Process 'C:\test-WDATP-test\invoice.exe'```
+```powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference= 'silentlycontinue';(New-ObjectSystem.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe','C:\test-WDATP-test\invoice.exe');Start-Process 'C:\test-WDATP-test\invoice.exe'```
 
 ![Text Description automatically generated](./media/image92.png)
 
-22. Close the VM connection.
-
-23. If the device onboarding is successful, you can go to
-    the **Microsoft 365 Defender** portal that we left open in the
-    browser on Lab VM and you will see that the detection test is marked
-    as completed and a new alert appears in few minutes.
-
-![A screenshot of a computer Description automatically
-generated](./media/image93.png)
-
-24. Now copy the file we downloaded in step 13, and repeat the steps 15
-    to 21 for the VMs — **Connies-Device** and **Chriss-Device**,
-    respectively to onboard them as Devices in **Microsoft 365
-    Defender** portal.
-
-25. Open the ```https://purview.microsoft.com ``` and log in with the
-    username **pattif@{TENANTPREFIX}.onmicrosoft.com** and the User
-    password. (replace {TENANTPREFIX} with your tenant prefix given on the
-    resources tab).
-
-26. Open the **settings** by clicking on the settings in the navigation
+25. Open the **settings** by clicking on the settings in the navigation
     and choose **Devices Onboarding** \> **Devices**.
 
 **Note:** While it usually takes about 60 seconds for device onboarding
 to be enabled, please allow up to 30 minutes.
 
-27. You will be able to check the **Devices** list. The list will be
+26. You will be able to check the **Devices** list. The list will be
     empty until you onboard devices, once done, you will be able to see
     your VMs listed as the onboarded device.
 
@@ -574,9 +583,7 @@ to be enabled, please allow up to 30 minutes.
 
 1.  If you closed the browser window in the previous task, open
     the ```https://purview.microsoft.com ``` and log in with the
-    username ```pattif@{TENANTPREFIX}.onmicrosoft.com``` and the User
-    password. (replace {TENANTPREFIX} with your tenant prefix given on the
-    resources tab).
+    Admin credentials.
 
 2.  Go to **Insider Risk Management** and select
     the **Policies** tab. Select **Create policy** to open the policy
@@ -611,16 +618,10 @@ generated](./media/image104.png)
 ![Graphical user interface, text, application Description automatically
 generated](./media/image105.png)
 
-8.  On the **Choose users and groups** page, select Include all users and
-    groups. Select **Next** to continue.
-
-![Graphical user interface, text, application Description automatically
-generated](./media/image105.png)
-
-![A screenshot of a computer Description automatically
-generated](./media/image106.png)
+8.  On the **Choose users, groups, & adaptive scopes** page, select **All users, groups, & adaptive scopes**. Select **Next** to continue.
 
 9.   On the **Exclude users and groups** page, select **Next**.
+
 10.  On the **Decide whether to prioritize** page, select **I don't want to
     specify priority content right now** (you'll be able to do this after
     the policy is created). Select **Next** to continue.
@@ -697,14 +698,10 @@ generated](./media/image118.png)
 3.  In the **This should last for (choose between 5 and 30 days)** field,
     select **10** days.
 
-4.  Use the **Search user to add to policies** field. Add **Patti**, **Adele**,
-    and **Christie**. Then click on **Start scoring activity**.
-
-![A screenshot of a computer screen Description automatically generated
-with medium confidence](./media/image119.png)
+4.  Use the **Search user to add to policies** field. Add **MOD Admin**. Then click on **Start scoring activity**.
 
 5.  Once you get the confirmation that you have started **Scoring
-    activity for 3 users**, click **Close**.
+    activity for 1 users**, click **Close**.
 
 ![A screenshot of a computer screen Description automatically generated
 with medium confidence](./media/image120.png)
@@ -714,10 +711,7 @@ with medium confidence](./media/image120.png)
 #### Step 1 – Create a new policy
 
 1.  If you closed the browser window in the previous task, open
-    the ```https://purview.microsoft.com ``` and log in with the
-    username ```pattif@{TENANTPREFIX}.onmicrosoft.com``` and the User
-    password. (replace {TENANTPREFIX} with your tenant prefix given on the
-    resources tab).
+    the ```https://purview.microsoft.com ``` and log in with the admin credentials.
 
 2.  Go to **Insider Risk Management** and select the **Policies** tab.
     Select **Create policy** to open the policy wizard.
@@ -734,20 +728,16 @@ generated](./media/image121.png)
 
     - Name (required): ```Data theft by a user```
 
-    - Description (optional): ```This is a test policy forthe preventing data theft.```
+    - Description (optional): ```This is a test policy for the preventing data theft.```
 
 5.  Select **Next** to continue.
 
 ![A screenshot of a computer Description automatically
 generated](./media/image122.png)
 
-6.  On the **Choose users and groups** page, select **Include all users and
-    groups**. Select **Next** to continue.
+6.  On the **Choose users, groups, & adaptive scopes** page, select **All users, groups, & adaptive scopes**. Select **Next** to continue.
 
-![A screenshot of a computer Description automatically
-generated](./media/image106.png)
-
-7.  On the **Exclude users and groups** page, select **Next**.
+7.  On the **Exclude users, groups, & adaptive scopes** page, select **Next**.
 
 9.  On the **Decide whether to prioritize** page, select **I want to specify
     priority content**. Select the check box for **Sensitivity
@@ -846,11 +836,8 @@ generated](./media/image118.png)
 3.  In the **This should last for (choose between 5 and 30 days)** field,
     select **10** days.
 
-4.  Use the **Search user to add to policies** field. Add **Patti**. Then click
+4.  Use the **Search user to add to policies** field. Add **MOD Admin**. Then click
     on **Start scoring activity**.
-
-![A screenshot of a computer screen Description automatically
-generated](./media/image136.png)
 
 5.  Once you get the confirmation that you have started **Scoring
     activity for 1 users**, click **Close**.
@@ -863,10 +850,7 @@ generated](./media/image137.png)
 #### Step 1 – Create a new policy
 
 1.  If you closed the browser window in the previous task, open
-    the ```https://purview.microsoft.com ``` and log in with the
-    username ```pattif@{TENANTPREFIX}.onmicrosoft.com``` and the User
-    password. (replace {TENANTPREFIX} with your tenant prefix given on the
-    resources tab).
+    the ```https://purview.microsoft.com ``` and log in with admin credentials.
 
 2.  Go to **Insider Risk Management** and select the **Policies** tab.
     Select **Create policy** to open the policy wizard.
@@ -884,7 +868,7 @@ generated](./media/image138.png)
 
     - Name (required): ```Data leaks by a user```
 
-    - Description (optional): ```This is a test policy forthe preventing data leaks.```
+    - Description (optional): ```This is a test policy for preventing data leaks.```
 
 5.  Select **Next** to continue.
 
@@ -909,7 +893,7 @@ medium confidence](./media/image140.png)
 
 9.  On the **SharePoint sites to prioritize** page, select **Add or edit
     SharePoint sites**. On the flyout pane,
-    select **https://{TENANTPREFIX}.sharepoint.com/sites/ContosoWeb1** and
+    select ```https://{TENANTPREFIX}.sharepoint.com/sites/ContosoWeb1``` and
     select **Add**. Then click **Next**.
 
 10.  On the **Sensitivity labels to prioritize** page, select **Add or edit
@@ -981,17 +965,11 @@ medium confidence](./media/image146.png)
 2.  In the **Reason field in the Add users to multiple policies** pane,
     type Testing the policy. In the **This should last for (choose between
     5 and 30 days)** field, select **10** days. Use the **Search user to add to
-    policies** field. Add **Patti**, **Adele**, and **Christie**. Then click on **Start
+    policies** field. Add **MOD Admin**. Then click on **Start
     scoring activity**.
 
-![A screenshot of a computer Description automatically generated with
-medium confidence](./media/image147.png)
-
 3.  Once you get the confirmation that you have started **Scoring
-    activity for 3 users**, click **Close**.
-
-![A screenshot of a computer Description automatically generated with
-medium confidence](./media/image148.png)
+    activity for 1 user**, click **Close**.
 
 You have successfully created the Insider risk management policies.
 
