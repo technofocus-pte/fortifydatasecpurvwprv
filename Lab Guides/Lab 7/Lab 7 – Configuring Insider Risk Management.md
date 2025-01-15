@@ -34,6 +34,7 @@ generated](./media/image2.jpeg)
 medium confidence](./media/image3.png)
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ### Task 1: Redeem the Azure Pass
 
 **Note**: - You may be asked for authentication while performing this Task. Please download Microsoft Authenticator on your mobile device or add your phone number as the authentication method when asked. You will be guided through the steps given on your authentication setup wizard, when asked for authentication.
@@ -368,6 +369,8 @@ christies@{TENANTPREFIX}.onmicrosoft.com
 
 User password
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ## Exercise 2: Create Insider Risk Management policies.
